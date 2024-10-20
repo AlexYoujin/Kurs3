@@ -2,14 +2,18 @@ from typing import List
 
 
 class Product:
-    def __init__(self, name: str, description: str, price: float, quantity: int) -> None:
+    def __init__(
+        self, name: str, description: str, price: float, quantity: int
+    ) -> None:
         self.name: str = name
         self.description: str = description
         self.price: float = price
         self.quantity: int = quantity
 
     def __repr__(self) -> str:
-        return f"Product(name='{self.name}', price={self.price}, quantity={self.quantity})"
+        return (
+            f"Product(name='{self.name}', price={self.price}, quantity={self.quantity})"
+        )
 
 
 class Category:
@@ -36,7 +40,9 @@ class Category:
 
 # Создаем продукты
 product1 = Product(name="Молоко", description="Коровье молоко", price=1.5, quantity=100)
-product2 = Product(name="Хлеб", description="Батон белого хлеба", price=0.8, quantity=50)
+product2 = Product(
+    name="Хлеб", description="Батон белого хлеба", price=0.8, quantity=50
+)
 
 # Создаем категории
 dairy_category = Category(name="Молочные продукты", description="Все молочные продукты")
